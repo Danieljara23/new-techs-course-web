@@ -1,5 +1,5 @@
 export const theme = {
   colors: {
-    primary: 'hotpink'
+    bg_main_color: 'white'
   }
 }
