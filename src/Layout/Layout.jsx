@@ -17,12 +17,8 @@ const headerCss = css`
 `;
 
 const ContentContainer = styled.div`
-  margin-top: 60px;
+  padding-top: 60px;
   min-height: 100vh;
-  padding: 0 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
   background-color: ${props => props.theme.colors.bg_main_color};
 `;

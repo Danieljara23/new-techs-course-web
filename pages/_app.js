@@ -1,3 +1,4 @@
+import 'antd/dist/antd.css'
 import '../styles/globals.css'
 import { CacheProvider } from '@emotion/core'
 import { cache } from 'emotion'

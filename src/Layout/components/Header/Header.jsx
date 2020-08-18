@@ -4,6 +4,8 @@ import styled from "@emotion/styled";
 import Hamburguer from "../../../../public/svg/icons/hamburguer_menu.svg";
 import Close from "../../../../public/svg/icons/close.svg";
 import { device } from '../../../../shared/mediaqueries';
+import { Menu } from 'antd';
+import Link from 'next/link';
 
 const headerCss = css`
   display: flex;
@@ -14,8 +16,9 @@ const headerCss = css`
   top: 0;
   width: 100%;
   height: 60px;
+  z-index: 10;
 `;
-  
+
 const navCss = css`
   position: relative;
   width: 100%;
@@ -62,7 +65,7 @@ const MenuCss = styled.div`
     background-color: white;
     transition: all 0.3s linear;
     transform: translateX(-100%);
-    z-index: 1;
+    z-index: 4;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -72,7 +75,7 @@ const MenuCss = styled.div`
   }
 
   @media ${device.tablet}{
-    display: grid;
+    display: none;
     grid-template-columns: repeat(3, auto);
     grid-gap: 30px;
     justify-content: flex-end;
@@ -107,20 +110,103 @@ const mobileContainerCss = css`
   }
 `;
 
-function Header(){
-  const [ showMenu, setShowMenu ] = useState(false);
+const antMenuStyles = css`
+  @media ${device.mobileS} {
+    display: none;
+  }
 
-  function handleMenuClick(){
+  @media ${device.tablet}{
+    display: block;
+    border-bottom-color: transparent;
+
+    & > .ant-menu-item:hover, & > .ant-menu-item a:hover, & > .ant-menu-submenu:hover, & > .ant-menu-submenu a:hover  {
+      color: #ec4941 !important;
+      border-bottom-color: transparent !important;
+    }
+
+    & > .ant-menu-item-selected{
+      border-bottom-color: transparent !important;
+    }
+  }
+  
+`;
+
+
+
+const { SubMenu } = Menu;
+
+function Header() {
+  const [showMenu, setShowMenu] = useState(false);
+  const [ menuState, setMenuState ] = useState('')
+
+  function handleClick(e) {
+    console.log('click ', e);
+    setMenuState(e.key);
+  };
+  
+  function handleMenuClick() {
     setShowMenu(!showMenu);
   }
-  return(
+  return (
     <header css={headerCss}>
       <nav css={navCss}>
         <BrandCss show={showMenu}>
-          <a href="#">CNT</a>
+          <Link href="/">
+            <a href="#">CNT</a>
+          </Link>
         </BrandCss>
+        <Menu onClick={handleClick} selectedKeys={[menuState]} mode="horizontal" css={antMenuStyles}>
+          <Menu.Item key="prologue" >
+            <Link href="/prologo">
+              <a href="#">Prólogo</a>
+            </Link>
+          </Menu.Item>
+          <Menu.Item key="title-2" >
+            Título 2
+          </Menu.Item>
+          <SubMenu  title="Capítulos">
+            <Menu.ItemGroup>
+              <Menu.Item key="chapther:1">
+                <Link href="/chapter1">
+                  <a href="#">Capítulo 1</a>
+                </Link>
+              </Menu.Item>
+              <Menu.Item key="chapther:2">
+                <Link href="/prologo">
+                  <a href="#">Capítulo 2</a>
+                </Link>
+              </Menu.Item>
+              <Menu.Item key="chapther:3">
+                <Link href="/prologo">
+                  <a href="#">Capítulo 3</a>
+                </Link>
+              </Menu.Item>
+              <Menu.Item key="chapther:4">
+                <Link href="/prologo">
+                  <a href="#">Capítulo 4</a>
+                </Link>
+              </Menu.Item>
+              <Menu.Item key="chapther:5">
+                <Link href="/prologo">
+                  <a href="#">Capítulo 5</a>
+                </Link>
+              </Menu.Item>
+              <Menu.Item key="chapther:6">
+                <Link href="/prologo">
+                  <a href="#">Capítulo 6</a>
+                </Link>
+              </Menu.Item>
+            </Menu.ItemGroup>
+          </SubMenu>
+          {/* <Menu.Item key="alipay">
+            <a href="https://ant.design" target="_blank" rel="noopener noreferrer">
+              Navigation Four - Link
+            </a>
+          </Menu.Item> */}
+        </Menu>
+
         <div css={mobileContainerCss} onClick={handleMenuClick}>
-          {!showMenu ? <Hamburguer/>:<Close/>}
+          {!showMenu ? <Hamburguer /> : <Close />}
         </div>
         <MenuCss show={showMenu}>
           <a href="#">📝 Presentación </a>
