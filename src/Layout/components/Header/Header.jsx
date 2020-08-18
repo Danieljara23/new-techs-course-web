@@ -209,9 +209,9 @@ function Header() {
           {!showMenu ? <Hamburguer /> : <Close />}
         </div>
         <MenuCss show={showMenu}>
-          <a href="#">📝 Presentación </a>
+          <a href="/prologo">📝 Prólogo </a>
           <a href="#">📩 Título 2</a>
-          <a href="#">🐱 Título 3</a>
+          <a href="chapter1">🐱 Capítulo 1</a>
         </MenuCss>
       </nav>
     </header>
