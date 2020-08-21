@@ -172,12 +172,12 @@ function Header() {
                 </Link>
               </Menu.Item>
               <Menu.Item key="chapther:2">
-                <Link href="/prologo">
+                <Link href="/chapter2">
                   <a href="#">Capítulo 2</a>
                 </Link>
               </Menu.Item>
               <Menu.Item key="chapther:3">
-                <Link href="/prologo">
+                <Link href="/chapter3">
                   <a href="#">Capítulo 3</a>
                 </Link>
               </Menu.Item>

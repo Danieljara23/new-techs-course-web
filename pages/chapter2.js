@@ -67,17 +67,26 @@ const mediaContainerCss = css`
 
 const { TabPane } = Tabs;
 
+const tabs = [
+  { title: 'Educación Virtual' },
+  { title: 'Características' },
+  { title: 'Principios básicos' },
+  { title: 'Conceptos importantes' },
+  { title: 'Recomendaciones: (plataformas y herramientas)' },
+  { title: 'Referencias Bibliográficas' }
+];
+
 const youtubeId = 'iE3LDcplEXo';
 
 function Chapter1(){
   return(
     <Layout title="Capítulo 1">
       <div css={mainContentCss}>
-        <h1>Capítulo 2: Primera infancia</h1>
+        <h1>Capítulo 2: Educación Virtual</h1>
         <div css={videoContainerCss}>
-          <div css={mediaContainerCss}>
+          <div css={videoCss}>
             <iframe css={iframeCss}
-              src="https://www.powtoon.com/s/cZcUrzN8dPm/1/m"
+              src={`https://www.youtube.com/embed/${youtubeId}`}
               frameBorder="0"
             />
           </div>
@@ -105,7 +114,7 @@ function Chapter1(){
               <h3>IMAGEN</h3>
               <p>Elit consequat occaecat velit ullamco laborum non eiusmod. Ipsum anim aliqua id tempor sunt ad ut mollit Lorem est consectetur. Eu officia consequat aliqua eu incididunt Lorem aliquip laborum ut voluptate labore velit sit. Est veniam nulla ad do ipsum reprehenderit minim mollit do. Sint ea do labore sit irure quis. Eu exercitation magna enim ut voluptate enim occaecat adipisicing veniam. Occaecat adipisicing Lorem officia cillum et veniam occaecat aliquip amet ipsum ipsum id mollit fugiat.</p>
             </TabPane>
-            <TabPane tab="Recomendaciones: (plataformas y herramientas)" key="4">
+            <TabPane tab="Conceptos importantes" key="4">
               <p><strong>Tecnología:</strong> Es el punto de partida porque el e Learning se basa en este recurso, pero es solo un vehículo en el que se transporta la educación.  La tecnología debe ser usada con mesura, no puede usarse ni más ni menos de la necesaria y que satisfaga por un lado las necesidades del estudiante, de los profesores y del contenido.</p>
               <p><strong>Contenidos:</strong> Es el conocimiento almacenado en formatos de documentos, videos,  pdf  y muchas otras formas que se entregan al estudiante mediante la tecnología.</p>
               <p><strong>Evaluación:</strong> Al modelo se le agregó un nuevo componente, la evaluación, debido a que todos los participantes deben rendir cuenta de sus propios actos de cara a los objetivos del curso.  Dos modelos de evaluación del eLearning se ajustan bastante al entorno local, el modelo de Donald L. Kirkpatric y otro diseñado por William Horton; ambos abogan por lo mismo, un uso sencillo de la tecnología, rendición de cuentas de todos los actores y un diseño amigable.</p>
@@ -122,7 +131,7 @@ function Chapter1(){
               
               
             </TabPane>
-            <TabPane tab="Título 5" key="5">
+            <TabPane tab="Historia de la educación Virtual" key="5">
               <p>La educación siempre existió, pero la enseñanza virtual solo tuvo lugar con la llegada y popularización de Internet.</p>
               <p>El uso de máquinas en la enseñanza ya tiene bastante tiempo, por ejemplo, para aprender matemáticas se usó el ábaco y después, cuando las cuentas empezaron a complicarse, la calculadora.</p>
               <p>Una línea del tiempo de la relación entre e-learning y educación, y cómo la tecnología desembocó en la enseñanza virtual es un buen aspecto para aprender sobre el cómo se ha venido dando en el transcurso de los años. </p>
@@ -145,11 +154,18 @@ function Chapter1(){
                 <li>Contar con recursos materiales necesarios: al menos un teléfono inteligente, o mejor aún una laptop, con internet</li>
                 <li>Dar la prioridad razonable al acompañamiento, lo que nos permitirá asignar un tiempo al día en generar los espacios de aprendizaje para el niño, con el soporte del profesional educativo asignado</li>
               </ul>
+              <h3>IMAGEN</h3>
             </TabPane>
-            <TabPane tab="Título 6" key="6">
+            <TabPane tab="Desafíos de la educación virtual en la primera infancia" key="6">
               <h4>FALTA IMAGEN</h4>
-            </TabPane>Referencias
-            <TabPane tab="Título 7" key="7">
+            </TabPane>
+            <TabPane tab="¿Cuál es el papel de los padres de familia?" key="7">
+              <h4>FALTA IMAGEN</h4>
+            </TabPane>
+            <TabPane tab="Recomendaciones: (plataformas y herramientas)" key="8">
+              <h4>FALTA IMAGEN</h4>
+            </TabPane>
+            <TabPane tab="Referencias" key="9">
               <ul>
                 <li>Kronos, Á. (Abril de 2020). Desafíos de la educación a distancia en la primera infancia. Obtenido de KRONOS 365: <a href="https://kronos365.com/desafios-de-la-educacion-a-distancia-en-la-primera-infancia/" target="_blank">https://kronos365.com/desafios-de-la-educacion-a-distancia-en-la-primera-infancia/</a></li>
                 <li>Mineducación. (2020). Educación virtual o educación en línea. Obtenido de Ministerio de educación : <a href="https://www.mineducacion.gov.co/1759/w3-article-196492.html?_noredirect=1" target="_blank">https://www.mineducacion.gov.co/1759/w3-article-196492.html?_noredirect=1</a></li>

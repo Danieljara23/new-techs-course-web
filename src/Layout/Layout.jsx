@@ -4,12 +4,6 @@ import styled from "@emotion/styled";
 import Head from 'next/head'
 
 const LayoutCss = css`
-  min-height: 100vh;
-  display: grid;
-  grid-template-areas: "header"
-  "content"
-  "footer";
-  grid-template-rows: auto 200px;
 `;
 
 const headerCss = css`

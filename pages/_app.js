@@ -5,6 +5,7 @@ import { cache } from 'emotion'
 import { globalStyles } from '../shared/styles'
 import { ThemeProvider } from 'emotion-theming'
 import { theme } from '../shared/theme';
+import { Head } from "next/head";
 
 function MyApp({ Component, pageProps }) {
   return (
