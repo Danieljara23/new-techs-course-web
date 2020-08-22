@@ -73,11 +73,11 @@ function Chapter1(){
   return(
     <Layout title="Capítulo 1">
       <div css={mainContentCss}>
-        <h1>Capítulo 2: Primera infancia</h1>
+        <h1>Capítulo 1: Primera infancia</h1>
         <div css={videoContainerCss}>
           <div css={mediaContainerCss}>
             <iframe css={iframeCss}
-              src="https://www.powtoon.com/s/cZcUrzN8dPm/1/m"
+              src="https://www.powtoon.com/embed/cZcUrzN8dPm/"
               frameBorder="0"
             />
           </div>
