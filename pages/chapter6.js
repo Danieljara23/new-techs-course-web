@@ -2,6 +2,7 @@ import { css } from "@emotion/core";
 import  Layout  from "../src/Layout/index";
 import { device } from '../shared/mediaqueries';
 import { Tabs } from 'antd';
+import Head from "next/head";
 
 const mainContentCss = css`
   @media ${device.mobileS}{
@@ -69,40 +70,41 @@ const { TabPane } = Tabs;
 
 const youtubeId = 'iE3LDcplEXo';
 
-function Chapter1(){
+function Chapter6(){
   return(
-    <Layout title="Capítulo 1: Primera Infancia">
+    <Layout title="Capítulo 6: Padres, acompañantes y cuidadores">
       <div css={mainContentCss}>
-        <h1>Capítulo 1: Primera infancia</h1>
+        <h1>Capítulo 6: Padres, acompañantes y cuidadores</h1>
         <div css={videoContainerCss}>
           <div css={mediaContainerCss}>
             <iframe css={iframeCss}
-              src="https://www.powtoon.com/embed/cZcUrzN8dPm/"
+              src="https://www.powtoon.com/embed/gaIcy50qv75/"
               frameBorder="0"
             />
           </div>
         </div>
         <div css={tabsContainerCss}>
           <Tabs defaultActiveKey="1" tabPosition="top">
-            <TabPane tab="Primera Infancia" key="1">
-              <p>El concepto de primera infancia tiene unas regulaciones que establecen la edad como primer lugar para definir esta, según la UNICEF (2007) comprende desde los 0 a los 8 años, algunos autores la posicionan entre los 3 y 6 años y en Colombia, está categorizada como primera infancia la franja poblacional que va de los 0 a los 6 años (DNP, 2014).</p>
-              <p>Si bien, desde las instituciones esto obedece a un grupo etáreo en específico, hay una serie de características que no se reducen sólo a un rango de edad, por las cuales se habla de primera infancia en el país. Aquella se ubica en el periodo desde el que se inicia la gestación hasta los primeros seis años de vida, lo cual, obedece a un desarrollo físico y emocional específico, en el que se dan los primeros pasos para hacer sólidos los elementos necesarios para seguir creciendo integralmente.</p>
-              <p>Sobre lo que se ha planteado en cuanto a estas primeras edades, es que el individuo es un ser dependiente de sus padres, madres o cuidadores, y por lo tanto, hay una legislación especial que lo ampara en derechos, poniéndolos como prioridad por encima de los derechos de los adultos. Con el reconocimiento de estos derechos, se busca identificar, reconocer, y sistematizar prácticas y pautas de cuidado, crecimiento y crianza que permitan que los niños en este ciclo se consoliden y afiancen capacidades, habilidades y potencialidades a través de la atención integral que se les brinde y que les permita vivir en unas condiciones dignas de inclusión social, emocional, cognitiva y física que posibiliten el desarrollo de condiciones óptimas para inscribir su lugar en el mundo.</p>
-              <p>Una de las acciones más potentes para tratar de alcanzar las condiciones planteadas anteriormente con relación a la primera infancia, es ofrecer, unas garantías de crecimiento dentro de la sociedad, en un ambiente que oferte y proporcione cuidados físicos, emocionales, nutricionales, de salud, cuidados afectivos y la posibilidad de que el niño o niña tenga garantías a futuro para acceder a procesos educativos de corto, mediano y largo plazo, acompañados por políticas gubernamentales enfocadas a permitir que los derechos primen so pena de una intervención del Estado a través de las leyes como la de infancia y adolescencia y el apoyo de instituciones como el Intituto Colombiano de Bienestar Familiar -ICBF- que puedan garantizar que los efectos constitucionales sean de cumplimiento respecto a los derechos y la protección de los niños y las niñas.</p>
-            </TabPane>
-            <TabPane tab="Saberes, intereses y dimensiones del desarrollo infantil" key="2">
+            <TabPane tab="Familia & Escuela: relación trascendental." key="1">
               <div css={videoContainerCss}>
                 <div css={mediaContainerCss}>
                   <iframe css={iframeCss}
-                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/880913134&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+                    src="https://app.emaze.com/@AOWICCZWR/familia--escuela"
                     frameBorder="0"
                   />
                 </div>
               </div>
-              <p>Con el fin de que las alianzas entre Estado, familia, instituciones y sociedad lleven a cabo acciones en pro de la infancia, sus pactos deben sustentarse en la lucha en contra de las políticas de desigualdad a las que hoy asistimos a pensar en clave de la presente propuesta de cartilla para el trabajo con primera infancia desde el uso de herramientas digitales. Todo esto, comprende unos saberes, unos intereses y unas necesidades que se manifiestan desde y para los niños y niñas en esas primeras edades.</p>
-              <p>Durante estos primeros años, se debe propender por un desarrollo integral que tenga en cuenta esas dimensiones del desarrollo infantil y los sentidos de llevar a cabo procesos de estimulación y educación en los primeros años de vida, de acuerdo con el texto “Desarrollo infantil y competencias en la primera infancia”, el desarrollo infantil es un proceso dinámico en continua transformación a lo largo de la vida, éste no se da en etapas claramente establecidas por la edad, pues cada ser humano tiene su propio ritmo, lo cual permite entender el desarrollo como “un proceso de reconstrucción y reorganización permanente” (MEN, 2010, p.16).</p>
-              <p>Algunos de los elementos de las dimensiones del desarrollo infantil que se hace de vital importancia es el físico, que comprende y se extiende a una necesidad nutricional, dado que, si se encuentra una deficiencia física que atañe a lo nutricional esto tiene diversas repercusiones en aspectos como lo afectivo, lo socioemocional, un niño con hambre está expuesto a quebrantos de salud, a su vez deficiencias en salud causan disminución en la capacidad de desarrollo cognitivo, reduce las conexiones neuronales y los procesos de mielinización de las mismas, por ende, se tiende a incurrir en falta de atención, interés, concentración, y en condiciones adversas para un desarrollo psicomotor adecuado, además, de que se hace más amplia la brecha en cuanto a la adquisición de conocimientos y habilidades necesarias para su adaptación en el mundo.</p>
-              <p>Por esto, es importante que desde las políticas de infancia, se diseñen programas en los cuales haya participación, de los padres, la familia, la sociedad y el estado, en una acción articulada por el trabajo con esos saberes, intereses y dimensiones de los niños y las niñas, este trabajo debe estar direccionado a salvaguardar esos derechos de la primera infancia por, sobre todo, de lo contrario un desarrollo deficiente del niño en la primera infancia acarrea pérdidas económicas invaluables para un país, si se pierde el niño, se pierde el adulto.</p>
+            </TabPane>
+            <TabPane tab="Saberes, intereses y dimensiones del desarrollo infantil" key="2">
+              <div css={videoContainerCss}>
+                <div css={mediaContainerCss}>
+                  
+                  <iframe css={iframeCss}
+                    src="https://www.canva.com/design/DAEEU33LB8w/leDQjJireptmf6mmc69COw/view"
+                    frameBorder="0"
+                  />
+                </div>
+              </div>
             </TabPane>
             <TabPane tab="Necesidades y actores" key="3">
               <p>La primera responsabilidad recae sobre el núcleo familiar, los padres o en su defecto la familia cercana. En América Latina, hay un fenómeno grande y que a su vez es un problema de grandes dimensiones, el embarazo en adolescentes, que influye directamente sobre la calidad de vida que los niños nacidos en este segmento, puedan tener; por lo tanto, los programas se deben diseñar no solo apuntando a las familias compuestas bajo mutuo acuerdo si no también para aquellas familias disfuncionales en las cuales la ausencia de uno o dos de los progenitores deja vacíos y delega responsabilidades en terceros. La educación entonces comienza por crear una conciencia social con respecto al deseo natural de maternar a temprana edad ya sea consciente o inconscientemente, cuando se hace de forma consciente por lo general es para tener una aceptación social, un cambio de rol o escapar de la autoridad.</p>
@@ -138,4 +140,4 @@ function Chapter1(){
   )
 }
 
-export default Chapter1
+export default Chapter6

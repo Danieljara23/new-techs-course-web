@@ -1,6 +1,7 @@
 import { css } from "@emotion/core";
 import  Layout  from "../src/Layout/index";
 import { device } from '../shared/mediaqueries';
+import ResourcesCards from "../src/components/ResourcesCards"
 import { Tabs } from 'antd';
 
 const mainContentCss = css`
@@ -43,13 +44,6 @@ const tabsContainerCss = css`
 
 `;
 
-const videoCss = css`
-  position: relative;
-  padding-bottom: 56.25%;
-  padding-top: 25px;
-  height: 0;
-`;
-
 const iframeCss = css`
   position: absolute;
   top: 0;
@@ -67,13 +61,12 @@ const mediaContainerCss = css`
 
 const { TabPane } = Tabs;
 
-const youtubeId = 'iE3LDcplEXo';
 
 function Chapter1(){
   return(
     <Layout title="Capítulo 3: Aplicaciones tecnológicas y recursos educativos digitales">
       <div css={mainContentCss}>
-        <h1>Capítulo 3: Aplicaciones tecnológicas y recursos educativos digitales: Una posibilidad para los profes en pro de generar experiencias educativas significativas.</h1>
+        <h1>Capítulo 3: Aplicaciones tecnológicas y recursos educativos digitales</h1>
         <div css={videoContainerCss}>
           <div css={mediaContainerCss}>
             <iframe css={iframeCss}
@@ -104,10 +97,10 @@ function Chapter1(){
                 </div>
               </div>
             </TabPane>
-            <TabPane tab="Banco de recurso  " key="3">
-              
+            <TabPane tab="Banco de recursos" key="3">
+              <ResourcesCards/>
             </TabPane>
-            <TabPane tab="Referencias Bibliográficas" key="7">
+            <TabPane tab="Referencias" key="4">
               <ul>
                 <li>Diccionario de la Real Academia Española (s.f). Analógico. Recuperado de <a href="https://dle.rae.es/analógico" target="_blank">https://dle.rae.es/analógico</a></li>
                 <li>Diccionario de la Real Academia Española (s.f). Digital. Recuperado de <a href="http://cefire.edu.gva.es/pluginfile.php/1040541/mod_resource/content/2/52_caractersticas_de_los_recursos_digitales_educativos.html" target="_blank">http://cefire.edu.gva.es/pluginfile.php/1040541/mod_resource/content/2/52_caractersticas_de_los_recursos_digitales_educativos.html</a></li>

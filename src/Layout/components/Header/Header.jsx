@@ -182,7 +182,7 @@ function Header() {
                 </Link>
               </Menu.Item>
               <Menu.Item key="chapther:4">
-                <Link href="/prologo">
+                <Link href="/chapter4">
                   <a href="#">Capítulo 4</a>
                 </Link>
               </Menu.Item>
@@ -192,7 +192,7 @@ function Header() {
                 </Link>
               </Menu.Item>
               <Menu.Item key="chapther:6">
-                <Link href="/prologo">
+                <Link href="/chapter6">
                   <a href="#">Capítulo 6</a>
                 </Link>
               </Menu.Item>
@@ -220,6 +220,9 @@ function Header() {
           </Link>
           <Link href="/chapter3">
             <a href="#">Capítulo 3</a>
+          </Link>
+          <Link href="/chapter4">
+            <a href="#">Capítulo 4</a>
           </Link>
         </MenuCss>
       </nav>
