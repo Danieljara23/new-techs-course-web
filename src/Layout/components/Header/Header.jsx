@@ -43,8 +43,9 @@ const navCss = css`
 
 const BrandCss = styled.div`
   & a {
-    color: #ec4941;
+    color: #ff5200;
     font-weight: bold;
+    font-size: 24px;
   }
   @media ${device.mobileS}{
     display: none;
@@ -111,6 +112,9 @@ const mobileContainerCss = css`
 `;
 
 const antMenuStyles = css`
+
+  font-size: 16px;
+
   @media ${device.mobileS} {
     display: none;
   }
@@ -120,7 +124,6 @@ const antMenuStyles = css`
     border-bottom-color: transparent;
 
     & > .ant-menu-item:hover, & > .ant-menu-item a:hover, & > .ant-menu-submenu:hover, & > .ant-menu-submenu a:hover  {
-      color: #ec4941 !important;
       border-bottom-color: transparent !important;
     }
 
@@ -130,8 +133,6 @@ const antMenuStyles = css`
   }
   
 `;
-
-
 
 const { SubMenu } = Menu;
 
@@ -152,7 +153,7 @@ function Header() {
       <nav css={navCss}>
         <BrandCss show={showMenu}>
           <Link href="/">
-            <a href="#">CNT</a>
+            <a href="#">INFANTIC</a>
           </Link>
         </BrandCss>
         <Menu onClick={handleClick} selectedKeys={[menuState]} mode="horizontal" css={antMenuStyles}>

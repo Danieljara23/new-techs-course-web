@@ -29,19 +29,6 @@ const videoContainerCss = css`
 const tabsContainerCss = css`
   margin-top: 20px;
   width: 100%;
-
-  & div.ant-tabs-tab-active > div {
-    color: #ec4941 !important;
-  }
-
-  & .ant-tabs-tab:hover {
-    color: #ec4941 !important;
-  }
-
-  & .ant-tabs-ink-bar{
-    background-color: #ec4941;
-  }
-
 `;
 
 const iframeCss = css`

@@ -23,8 +23,29 @@ const cardsContainerCss = css`
 const cardItemCss = css`
   border-radius: 8px;
   padding: 32px;
-  box-shadow: 0px 2px 3px lightgrey;
+  box-shadow: 0px 3px 6px hsl(0 0% 0% / .15), 0px 2px 4px hsl(0 0% 0% / .1);
   border: 1px solid #f7f7f7;
+
+  & a {
+    color: #3a3a3a;
+  }
+
+  & h3 {
+    position: relative;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+
+    &:after {
+      position: absolute;
+      width: 50px;
+      height: 2px;
+      content: "";
+      background-color: #ff641a;
+      bottom: 0;
+      left: 0;
+    }
+  }
+  
 `;
 
 function ResourcesCards(){
@@ -37,6 +58,7 @@ function ResourcesCards(){
               <article>
                 <a href={item.href} target="_blank">
                   <h3>{item.name}</h3>
+                  
                   <p>{item.description}</p>
                 </a>
               </article>

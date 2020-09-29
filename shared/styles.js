@@ -1,5 +1,6 @@
 import { keyframes, css, Global } from '@emotion/core'
 import styled from '@emotion/styled'
+import '../styles/antd.less';
 
 export const globalStyles = (
   <Global
