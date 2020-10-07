@@ -3,6 +3,7 @@ import { css, keyframes } from "@emotion/core";
 import styled from "@emotion/styled";
 import Hamburguer from "../../../../public/svg/icons/hamburguer_menu.svg";
 import Close from "../../../../public/svg/icons/close.svg";
+import Ribbon from "../../../../public/svg/icons/ribbon.svg";
 import { device } from '../../../../shared/mediaqueries';
 import { Menu } from 'antd';
 import Link from 'next/link';
@@ -69,7 +70,6 @@ const MenuCss = styled.div`
     z-index: 4;
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
     transform: ${({ show }) => show ? 'translateX(0)' : 'translateX(-100%)'};
     height: 100vh;
@@ -112,7 +112,6 @@ const mobileContainerCss = css`
 `;
 
 const antMenuStyles = css`
-
   font-size: 16px;
 
   @media ${device.mobileS} {
@@ -122,17 +121,47 @@ const antMenuStyles = css`
   @media ${device.tablet}{
     display: block;
     border-bottom-color: transparent;
-
-    & > .ant-menu-item:hover, & > .ant-menu-item a:hover, & > .ant-menu-submenu:hover, & > .ant-menu-submenu a:hover  {
-      border-bottom-color: transparent !important;
-    }
-
-    & > .ant-menu-item-selected{
-      border-bottom-color: transparent !important;
-    }
   }
-  
 `;
+
+const mobileMenuItemsListCss = css`
+  display: grid;
+  grid-template-rows: repeat(auto-fill, 55px); 
+  grid-template-columns: 1fr;
+  justify-content: start;
+  justify-items: start;
+  width: 100%;
+  // height: calc(100% - 62px);
+  height: inherit;
+  background-color: #f17e48;
+  margin-top: 10px;
+  padding: 30px 40px;
+`;
+
+const mobileMenuItemCss = css`
+  font-size: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: white;
+
+  & svg {
+    margin-right: 5px;
+    width: 18px;
+    height: 18px;
+  }
+`;
+
+const mobileBrandCss = css`
+  margin-top: 50px;
+
+  & > a {
+    font-size: 40px;
+    font-weight: bold;
+  }
+`;
+
+
 
 const { SubMenu } = Menu;
 
@@ -199,32 +228,40 @@ function Header() {
               </Menu.Item>
             </Menu.ItemGroup>
           </SubMenu>
-          {/* <Menu.Item key="alipay">
-            <a href="https://ant.design" target="_blank" rel="noopener noreferrer">
-              Navigation Four - Link
-            </a>
-          </Menu.Item> */}
         </Menu>
 
         <div css={mobileContainerCss} onClick={handleMenuClick}>
           {!showMenu ? <Hamburguer /> : <Close />}
         </div>
-        <MenuCss show={showMenu}>
-          <Link href="/prologo">
-            <a href="#">Prólogo</a>
-          </Link>
-          <Link href="/chapter1">
-            <a href="#">Capítulo 1</a>
-          </Link>
-          <Link href="/chapter2">
-            <a href="#">Capítulo 2</a>
-          </Link>
-          <Link href="/chapter3">
-            <a href="#">Capítulo 3</a>
-          </Link>
-          <Link href="/chapter4">
-            <a href="#">Capítulo 4</a>
-          </Link>
+        <MenuCss show={showMenu} >
+          <div css={mobileBrandCss}>
+            <Link href="/">
+              <a href="#">INFANTIC</a>
+            </Link>
+          </div>
+          <div css={mobileMenuItemsListCss}>
+            <Link href="/prologo">
+              <a href="#" css={mobileMenuItemCss}> Prólogo</a>
+            </Link>
+            <Link href="/chapter1">
+              <a href="#" css={mobileMenuItemCss}> Capítulo 1</a>
+            </Link>
+            <Link href="/chapter2">
+              <a href="#" css={mobileMenuItemCss}> Capítulo 2</a>
+            </Link>
+            <Link href="/chapter3">
+              <a href="#" css={mobileMenuItemCss}> Capítulo 3</a>
+            </Link>
+            <Link href="/chapter4">
+              <a href="#" css={mobileMenuItemCss}> Capítulo 4</a>
+            </Link>
+            <Link href="/chapter5">
+              <a href="#" css={mobileMenuItemCss}> Capítulo 5</a>
+            </Link>
+            <Link href="/chapter6">
+              <a href="#" css={mobileMenuItemCss}> Capítulo 6</a>
+            </Link>
+          </div>
         </MenuCss>
       </nav>
     </header>

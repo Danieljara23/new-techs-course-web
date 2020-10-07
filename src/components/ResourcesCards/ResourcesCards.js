@@ -23,8 +23,7 @@ const cardsContainerCss = css`
 const cardItemCss = css`
   border-radius: 8px;
   padding: 32px;
-  box-shadow: 0px 3px 6px hsl(0 0% 0% / .15), 0px 2px 4px hsl(0 0% 0% / .1);
-  border: 1px solid #f7f7f7;
+  box-shadow: 0px 3px 6px hsl(0 0% 0% / .15), 0px 2px 4px hsl(0 0% 0% / .1), inset 4px 0px #ff641a;
 
   & a {
     color: #3a3a3a;
